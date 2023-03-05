@@ -1,0 +1,13 @@
+package enums;
+
+public enum ConfigProperties {
+
+	URL,
+	BROWSER,
+	OVERRIDEREPORTS,
+	PASSEDSTEPSCREENSHOT,
+	FAILEDSTEPSCREENSHOT,
+	SKIPPEDSTEPSCREENSHOT,
+
+
+}
