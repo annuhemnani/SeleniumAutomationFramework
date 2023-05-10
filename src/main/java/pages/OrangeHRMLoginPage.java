@@ -2,8 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 
-import com.tmb.driver.DriverManager;
-
 import enums.WaitStrategy;
 import reports.ExtentManager;
 

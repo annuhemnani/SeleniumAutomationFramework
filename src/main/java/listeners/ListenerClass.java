@@ -14,6 +14,7 @@ import reports.ExtentReport;
 public class ListenerClass implements ITestListener, ISuiteListener{
 
 	public void onStart(ISuite suite) {
+		System.out.println("suite name"+suite);
 		ExtentReport.initreport();
 
 		// TODO Auto-generated method stub
@@ -31,6 +32,7 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
+		System.out.println("this is to be run first");
 		ExtentReport.createTest(result.getMethod().getMethodName());
 	}
 
