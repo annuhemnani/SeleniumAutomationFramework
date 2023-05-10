@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -14,7 +15,9 @@ public class Driver {
 		if(Objects.isNull(DriverManager.getDriver()))
 		{
 		WebDriverManager.chromedriver().setup();
-		DriverManager.setDriver(new ChromeDriver());
+		ChromeOptions options=new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		DriverManager.setDriver(new ChromeDriver(options));
 		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		}
